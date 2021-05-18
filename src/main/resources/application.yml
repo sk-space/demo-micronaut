@@ -1,0 +1,44 @@
+micronaut:
+  application:
+    name: fuel
+  server:
+    port: 9090
+  router:
+    versioning:
+      enabled: true
+      parameter:
+        enabled: false
+        names: 'v,api-version'
+      header:
+        enabled: true
+        names:
+          - 'X-API-VERSION'
+          - 'Accept-Version'
+    static-resources:
+      default:
+        paths: "classpath:public"
+  io:
+    watch:
+      paths: src/main
+      restart: true
+
+dataSource:
+  url: jdbc:mysql://localhost:3306/micronaut
+  driverClassName: com.mysql.cj.jdbc.Driver
+  username: root
+  password: 'toor'
+  pooled: true
+  jmxExport: true
+hibernate:
+  hbm2ddl:
+    auto: update
+  cache:
+    queries: false
+    use_second_level_cache: false
+    use_query_cache: false
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create-update

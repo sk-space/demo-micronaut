@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.project
+testFramework: junit
+sourceLanguage: groovy
+buildTool: gradle
+features: [ app-name, data, data-jpa, gradle, groovy, groovy-application, hibernate-gorm, hibernate-validator, http-client, jdbc-hikari, junit, mysql, openapi, readme, shade, slf4j-simple, testcontainers, tomcat-server, yaml ]
